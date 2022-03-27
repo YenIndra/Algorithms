@@ -1,0 +1,15 @@
+def maxProduct(self,arr, n):
+		# code here
+		maxVal = 1
+		minVal = 1
+		product = -1000
+		
+		for i in arr:
+		    
+		    if i < 0:
+		        maxVal,minVal = minVal,maxVal
+		    minVal = min(i,i*minVal)
+		    maxVal = max(i,i*maxVal)
+		    product = max(maxVal,product)
+		
+		return product  
